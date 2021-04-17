@@ -10,12 +10,14 @@ $shape-color: #12A9D9;
   }
 
 circle {
+    position: fixed;
+    top: 0;
     fill: $shape-color;
     opacity: 70%;
 }
 
 .triangle {
-    position: absolute;
+    position: fixed;
     bottom: $rect-height;
   width: 0; 
   height: 0; 
@@ -25,7 +27,7 @@ circle {
 }
 
 .rectangle {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     background: $shape-color;
     width: 100vw;
