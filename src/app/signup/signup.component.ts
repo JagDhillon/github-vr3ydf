@@ -38,6 +38,20 @@ export class SignupComponent implements OnInit {
     { type: "Menulog", selected: 0 }
   ];
 
+  how_many = [
+    { icon : 'storefront', description: 'One Store', description_num: '1'},
+    { icon : 'storefront', description: 'Two To Four Stores', description_num: '2-4'},
+    { icon : 'storefront', description: 'Five Plus Stores', description_num: '5+'}
+  ];
+  how_many_selected = 0;
+
+  registers = [
+    { icon : 'point_of_sale', description: 'One Register', description_num: '1'},
+    { icon : 'point_of_sale', description: 'Two Registers', description_num: '2'},
+    { icon : 'point_of_sale', description: 'Three Or More Register', description_num: '3+'}
+  ];
+  register_selected = 0;
+
   constructor() {}
 
   ngOnInit(): void {}

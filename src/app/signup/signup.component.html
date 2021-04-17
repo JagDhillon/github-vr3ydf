@@ -60,14 +60,18 @@
       <input matInput required="true">
     </mat-form-field>
 
-    <div class="selections">
+    <mat-grid-list 
+      cols="1" rowHeight="75px" [gutterSize]="'10px'"
+      class="selections">
 
-      <div *ngFor="let s of best_describes; let i =index" class="selection"
+      <mat-grid-tile *ngFor="let s of best_describes; let i =index" class="selection"
         [ngClass]="i==selected_describe ? 'selected' : 'baba'" (click)="selected_describe=i">
-        <mat-icon>{{s.icon}}</mat-icon>
-        <div class="s-description">{{s.description}}</div>
-      </div>
-    </div>
+        <div>
+          <mat-icon>{{s.icon}}</mat-icon>
+        </div>
+        <div>{{s.description}}</div>
+      </mat-grid-tile>
+    </mat-grid-list>
   </ng-container>
 
   <ng-container *ngIf="step==4">
@@ -79,17 +83,20 @@
       <input matInput required="true">
     </mat-form-field>
 
-    <div class="selections selections-type">
+    <mat-grid-list 
+      cols="3" rowHeight="75px" [gutterSize]="'10px'" class="selections">
 
-      <div *ngFor="let s of type_business; let i =index" class="selection"
+      
+
+      <mat-grid-tile *ngFor="let s of type_business; let i =index" class="selection"
         [ngClass]="i==selected_type ? 'selected' : 'baba'" (click)="selected_type=i">
         <div>
           <mat-icon>{{s.icon}}</mat-icon>
         </div>
         <div class="s-description">{{s.description}}</div>
-      </div>
+      </mat-grid-tile>
 
-    </div>
+    </mat-grid-list>
 
   </ng-container>
 
@@ -103,15 +110,20 @@
       <input matInput required="true">
     </mat-form-field>
 
-    <div class="selections selections-type">
-      <div *ngFor="let s of serve_customers; let i =index" class="selection"
-        [ngClass]="s.selected ? 'selected' : 'baba'" (click)="s.selected=!s.selected">
-        <div class="s-description">{{s.type}}</div>
-        <mat-icon class="small-icon" *ngIf="s.selected">remove_circle</mat-icon>
-        <mat-icon class="small-icon" *ngIf="!s.selected">add_circle</mat-icon>
-      </div>
-    </div>
+    <mat-grid-list 
+      cols="3" rowHeight="75px" [gutterSize]="'10px'"
+      class="selections">
+      <mat-grid-tile *ngFor="let s of serve_customers; let i =index" class="
+        tile-block" [ngClass]="s.selected ? 'selected' : 'baba'" (click)="s.selected=!s.selected">
 
+        <div class="s-description">{{s.type}}</div>
+        <div>
+          <mat-icon class="small-icon" *ngIf="s.selected">remove_circle</mat-icon>
+          <mat-icon class="small-icon" *ngIf="!s.selected">add_circle</mat-icon>
+        </div>
+
+      </mat-grid-tile>
+    </mat-grid-list>
 
   </ng-container>
 
@@ -120,20 +132,50 @@
       How Many Stores/Sites Will <br>
         You Have?
     </div>
-    <mat-form-field class="example-full-width">
+    <mat-form-field class="example-full-width hidden">
       <mat-label>First Name</mat-label>
       <input matInput required="true">
     </mat-form-field>
+
+    <mat-grid-list 
+      cols="1" rowHeight="75px" [gutterSize]="'10px'"
+      class="selections">
+      <mat-grid-tile *ngFor="let h of how_many; let i=index" [ngClass]="i==how_many_selected ? 'selected' : 'baba'"
+        (click)="how_many_selected=i">
+        <div class="grid-item">{{h.description}}</div>
+        <div class="grid-item">
+          <mat-icon>{{h.icon}}</mat-icon>
+        </div>
+        <div class="grid-item">{{h.description_num}}</div>
+      </mat-grid-tile>
+    </mat-grid-list>
   </ng-container>
 
   <ng-container *ngIf="step==7">
     <div class="slogan">
       How Many Registers Per Site?
     </div>
-    <mat-form-field class="example-full-width">
+
+    <mat-form-field class="example-full-width hidden">
       <mat-label>First Name</mat-label>
       <input matInput required="true">
     </mat-form-field>
+
+    <mat-grid-list 
+      cols="1" rowHeight="75px" [gutterSize]="'10px'"
+      class="selections">
+      <mat-grid-tile *ngFor="let h of registers; let i=index" [ngClass]="i==register_selected ? 'selected' : 'baba'"
+        (click)="register_selected=i">
+
+        <div class="grid-item">{{h.description}}</div>
+        <div class="grid-item">
+          <mat-icon>{{h.icon}}</mat-icon>
+        </div>
+        <div class="grid-item">{{h.description_num}}</div>
+
+      </mat-grid-tile>
+    </mat-grid-list>
+
   </ng-container>
 
   <div class="navigation">

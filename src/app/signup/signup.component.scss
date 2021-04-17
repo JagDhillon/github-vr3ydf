@@ -30,51 +30,22 @@
   display: none;
 }
 
-.selections {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: x-large;
-  text-align: center;
+mat-grid-list {
+  margin: 1rem 0;
 
-  .selection {
-    width: 100%;
-    border: 1px solid grey;
-    margin: 4px 0;
+  mat-grid-tile {
+    border: 1px solid black;
   }
 
   .selected {
-    background-color: silver;
-    border: none;
-    box-shadow: 4px 4px 4px;
+      background-color: silver;
+      border: none;
+      box-shadow: 4px 4px 4px;
   }
 
-  mat-icon {
-    font-size: 5rem;
-    display: inline-block;
-  }
-
-  .small-icon {
-      font-size: 2rem;
-    }
-
-  .s-description {
-  }
-}
-
-.selections-type {
-  flex-direction: row;
-  flex-wrap: wrap;
-  font-size: medium;
-  justify-content: space-evenly;
-
-  .selection {
-    width: 30%;
-    border: 1px solid grey;
-    margin: 4px 0;
-  }
-
-  mat-icon {
-    font-size: 3rem;
+  .grid-item {
+    margin: auto;
+    width: 33%;
+    text-align: center;
   }
 }

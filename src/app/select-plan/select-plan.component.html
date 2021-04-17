@@ -1,0 +1,20 @@
+<div class="container">
+
+  <div class="slogan">
+    Manage Your Business Smartness</div>
+
+  <div class="slogan-small">Select Monthly Plans for {{busName}}</div>
+
+  <div *ngFor="let p of plans" class="plan" [ngStyle]="{'background-color': p.color}">
+    <div class="plan-title">
+      <div class="name">
+        {{p.name}}
+      </div>
+      <div class="price">
+        {{p.cost | currency: 'AUD':'symbol':'.0'}}
+      </div>
+    </div>
+    <div>{{p.description}}</div>
+  </div>
+
+</div>

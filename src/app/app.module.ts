@@ -11,6 +11,7 @@ import { SharedModule } from './shared/shared.module';
 import { SignupComponent } from './signup/signup.component';
 import { BackgroundComponent } from './background/background.component';
 import { PlanDashboardComponent } from './plan-dashboard/plan-dashboard.component';
+import { SelectPlanComponent } from './select-plan/select-plan.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { PlanDashboardComponent } from './plan-dashboard/plan-dashboard.componen
     SignupComponent,
     BackgroundComponent,
     PlanDashboardComponent,
+    SelectPlanComponent,
   ],
   imports: [
     BrowserModule,
