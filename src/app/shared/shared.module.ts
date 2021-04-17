@@ -5,6 +5,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import {MatIconModule} from '@angular/material/icon'; 
 import {MatGridListModule} from '@angular/material/grid-list';
+import {MatRadioModule} from '@angular/material/radio';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -17,7 +19,9 @@ import {MatGridListModule} from '@angular/material/grid-list';
     MatInputModule,
     MatFormFieldModule,
     MatIconModule,
-    MatGridListModule
+    MatGridListModule,
+    MatRadioModule,
+    FormsModule
   ]
 })
 export class SharedModule { }

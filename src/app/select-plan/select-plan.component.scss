@@ -10,12 +10,12 @@
 
 .slogan {
   font-size: large;
-  margin: 10px 0px;
+  margin: 1rem 0rem;
 }
 
 .slogan-small {
   position: relative;
-  right: 3rem;
+  right: 1rem;
 }
 
 .plan {
@@ -28,13 +28,33 @@
   text-align: center;
   margin-bottom: 0.5rem;
   margin-top: 0.3rem;
+  position: relative;
 }
 
-.name, .price{
+.name, .price {
   display: inline;
   font-size: large;
 }
 
 .price {
   margin-left: 1rem;
+}
+
+.radio-class {
+  position: absolute;
+  left: 1rem;
+}
+
+.button-row {
+  margin: 10px;
+  text-align: right;
+  
+  button {
+    margin-right: 8px;
+  }
+
+  button:last-child {
+    margin-right: 0px;
+  }
+
 }

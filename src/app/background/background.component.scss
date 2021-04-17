@@ -10,10 +10,13 @@ $shape-color: #12A9D9;
   }
 
 circle {
-    position: fixed;
-    top: 0;
     fill: $shape-color;
     opacity: 70%;
+}
+
+.circles {
+  position: fixed;
+  top: 0;
 }
 
 .triangle {
