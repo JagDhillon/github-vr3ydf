@@ -4,26 +4,27 @@
     Manage Your Business Smartness</div>
 
   <div class="slogan-small">Select Monthly Plans for {{busName}}</div>
-<mat-radio-group [(ngModel)]="plan_selected">
-  <div *ngFor="let p of plans; let i = index" class="plan" [ngStyle]="{'background-color': p.color}">
-    <div class="plan-title">
-      <div class="radio-class">
-        <mat-radio-button value={{i}}>
-        </mat-radio-button>
+  <mat-radio-group [(ngModel)]="plan_selected">
+    <div *ngFor="let p of plans; let i = index" class="plan" [ngStyle]="{'background-color': p.color}">
+      <div class="plan-title">
+        <div class="radio-class">
+          <mat-radio-button value={{i}}>
+          </mat-radio-button>
+        </div>
+        <div class="name">
+          {{p.name}}
+        </div>
+        <div class="price">
+          {{p.cost | currency: 'AUD':'symbol':'.0'}}
+        </div>
       </div>
-      <div class="name">
-        {{p.name}}
-      </div>
-      <div class="price">
-        {{p.cost | currency: 'AUD':'symbol':'.0'}}
-      </div>
+      <div>{{p.description}}</div>
     </div>
-    <div>{{p.description}}</div>
-  </div>
-</mat-radio-group>
+  </mat-radio-group>
 
   <div class="button-row">
-    <button mat-raised-button color="primary">Save</button>
+    <button mat-raised-button color="primary"
+      [routerLink]="['/currentplan']">Save</button>
     <button mat-raised-button>Cancel</button>
   </div>
 

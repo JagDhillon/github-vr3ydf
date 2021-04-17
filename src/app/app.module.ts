@@ -12,6 +12,7 @@ import { SignupComponent } from './signup/signup.component';
 import { BackgroundComponent } from './background/background.component';
 import { PlanDashboardComponent } from './plan-dashboard/plan-dashboard.component';
 import { SelectPlanComponent } from './select-plan/select-plan.component';
+import { CurrentPlanComponent } from './current-plan/current-plan.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SelectPlanComponent } from './select-plan/select-plan.component';
     BackgroundComponent,
     PlanDashboardComponent,
     SelectPlanComponent,
+    CurrentPlanComponent,
   ],
   imports: [
     BrowserModule,
