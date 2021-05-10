@@ -1,0 +1,40 @@
+<div class="main" fxLayout="column" fxLayoutGap="20px">
+
+  <div class="current-plan" fxLayout="column" fxLayoutGap="10px">
+    <div class="title-description" fxLayout="row" fxLayoutGap="10px">
+      <div class="title">
+        Current Plan: {{plans[plan_current].title}}
+      </div>
+      <div>
+        ({{plans[plan_current].description}})
+      </div>
+    </div>
+
+    <div class="price" fxLayout="row" fxLayoutAlign="space-between">
+      <div>
+        Plan Price: {{'$' + (plans[plan_current].price | number)}}
+      </div>
+      <button mat-raised-button color="primary" [routerLink]="['/selectplan']">Change Plan</button>
+    </div>
+  </div>
+
+  <div class="plans">
+    <div class="title">
+      Plans
+    </div>
+    <div class="feature-name" *ngFor="let p of plans">{{p.title}}</div>
+
+    <ng-container *ngFor="let pf of plan_features; let i = index">
+      <div class="plan-feature">{{pf}}</div>
+      <div class="feature-tick" *ngFor="let p of plans">
+        <div *ngIf="p.features[i]; else cross">
+          <mat-icon class="tick" aria-hidden="false" aria-label="Example home icon">done</mat-icon>
+        </div>
+        <ng-template #cross>
+          <mat-icon class="cross" aria-hidden="false" aria-label="Example home icon">close</mat-icon>
+        </ng-template>
+      </div>
+    </ng-container>
+  </div>
+
+</div>

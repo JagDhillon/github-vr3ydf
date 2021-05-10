@@ -1,0 +1,48 @@
+.main {
+  width: 90%;
+}
+
+.current-plan {
+  margin-left: 20%;
+  margin-top: 20%;
+
+  .title {
+    font-size: x-large;
+  }
+
+}
+
+.plans {
+  margin: auto;
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+
+  .title {
+    font-size: large;
+    grid-column-start: 1;
+    grid-column-end: 7;
+  }
+
+  .title + div {
+    grid-column-start: 3;
+  }
+
+  .plan-feature {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .feature-tick, .feature-name {
+    margin: auto;
+  }
+
+  .tick {
+    color: green;
+  }
+
+  .cross {
+    color: rgba(255,0,0,0.4);
+  }
+
+}

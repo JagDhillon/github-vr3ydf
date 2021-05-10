@@ -24,11 +24,11 @@ export class CurrentPlanComponent implements OnInit {
     'Marketing',
     'Loyalty',
     'CRM',
-    'Bsiness Insights',
+    'Business Insights',
     'Rostering',
     'Accounting',
     'Payroll',
-    'Inventory Managment',
+    'Stock Managment',
     'Multi Sites'
   ];
 

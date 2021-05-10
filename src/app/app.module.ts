@@ -8,6 +8,7 @@ import { environment } from '../environments/environment';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { StartComponent } from './start/start.component';
 import { SharedModule } from './shared/shared.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { SignupComponent } from './signup/signup.component';
 import { BackgroundComponent } from './background/background.component';
 import { PlanDashboardComponent } from './plan-dashboard/plan-dashboard.component';
@@ -29,7 +30,8 @@ import { CurrentPlanComponent } from './current-plan/current-plan.component';
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     BrowserAnimationsModule,
-    SharedModule
+    SharedModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
