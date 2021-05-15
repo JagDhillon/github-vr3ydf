@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CompanyDetailsComponent } from './company-details/company-details.component';
 import { CurrentPlanComponent } from './current-plan/current-plan.component';
 import { PlanDashboardComponent } from './plan-dashboard/plan-dashboard.component';
 import { SelectPlanComponent } from './select-plan/select-plan.component';
@@ -11,7 +12,8 @@ const routes: Routes = [
   {path: 'signup', component: SignupComponent},
   {path: 'plandashboard', component: PlanDashboardComponent},
   {path: 'selectplan', component: SelectPlanComponent},
-  {path: 'currentplan', component: CurrentPlanComponent}
+  {path: 'currentplan', component: CurrentPlanComponent},
+  {path: 'companyDetails', component: CompanyDetailsComponent},
 ];
 
 @NgModule({

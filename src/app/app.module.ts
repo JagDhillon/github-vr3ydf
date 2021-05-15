@@ -14,6 +14,7 @@ import { BackgroundComponent } from './background/background.component';
 import { PlanDashboardComponent } from './plan-dashboard/plan-dashboard.component';
 import { SelectPlanComponent } from './select-plan/select-plan.component';
 import { CurrentPlanComponent } from './current-plan/current-plan.component';
+import { CompanyDetailsComponent } from './company-details/company-details.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { CurrentPlanComponent } from './current-plan/current-plan.component';
     PlanDashboardComponent,
     SelectPlanComponent,
     CurrentPlanComponent,
+    CompanyDetailsComponent,
   ],
   imports: [
     BrowserModule,
