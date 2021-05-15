@@ -1,4 +1,4 @@
-<form class="example-form">
+<form class="main">
   <ng-container *ngIf="step==1">
     <div class="slogan">
       Let’s Start Success <br>
@@ -60,9 +60,7 @@
       <input matInput required="true">
     </mat-form-field>
 
-    <mat-grid-list 
-      cols="1" rowHeight="75px" [gutterSize]="'10px'"
-      class="selections">
+    <mat-grid-list cols="1" rowHeight="75px" [gutterSize]="'10px'" class="selections">
 
       <mat-grid-tile *ngFor="let s of best_describes; let i =index" class="selection"
         [ngClass]="i==selected_describe ? 'selected' : 'baba'" (click)="selected_describe=i">
@@ -83,10 +81,9 @@
       <input matInput required="true">
     </mat-form-field>
 
-    <mat-grid-list 
-      cols="3" rowHeight="75px" [gutterSize]="'10px'" class="selections">
+    <mat-grid-list cols="3" rowHeight="75px" [gutterSize]="'10px'" class="selections">
 
-      
+
 
       <mat-grid-tile *ngFor="let s of type_business; let i =index" class="selection"
         [ngClass]="i==selected_type ? 'selected' : 'baba'" (click)="selected_type=i">
@@ -110,9 +107,7 @@
       <input matInput required="true">
     </mat-form-field>
 
-    <mat-grid-list 
-      cols="3" rowHeight="75px" [gutterSize]="'10px'"
-      class="selections">
+    <mat-grid-list cols="3" rowHeight="75px" [gutterSize]="'10px'" class="selections">
       <mat-grid-tile *ngFor="let s of serve_customers; let i =index" class="
         tile-block" [ngClass]="s.selected ? 'selected' : 'baba'" (click)="s.selected=!s.selected">
 
@@ -137,9 +132,7 @@
       <input matInput required="true">
     </mat-form-field>
 
-    <mat-grid-list 
-      cols="1" rowHeight="75px" [gutterSize]="'10px'"
-      class="selections">
+    <mat-grid-list cols="1" rowHeight="75px" [gutterSize]="'10px'" class="selections">
       <mat-grid-tile *ngFor="let h of how_many; let i=index" [ngClass]="i==how_many_selected ? 'selected' : 'baba'"
         (click)="how_many_selected=i">
         <div class="grid-item">{{h.description}}</div>
@@ -161,9 +154,7 @@
       <input matInput required="true">
     </mat-form-field>
 
-    <mat-grid-list 
-      cols="1" rowHeight="75px" [gutterSize]="'10px'"
-      class="selections">
+    <mat-grid-list cols="1" rowHeight="75px" [gutterSize]="'10px'" class="selections">
       <mat-grid-tile *ngFor="let h of registers; let i=index" [ngClass]="i==register_selected ? 'selected' : 'baba'"
         (click)="register_selected=i">
 

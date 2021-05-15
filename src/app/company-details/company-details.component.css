@@ -1,15 +1,1 @@
-.main {
-  margin: 10%;
-}
 
-
-.company-form {
-  display: flex;
-  flex-direction: column;
-}
-
-.field-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-}
